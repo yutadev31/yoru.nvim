@@ -12,6 +12,7 @@ function M.setup()
 
   local groups = {
     Cursor = { fg = colors.text },
+    CursorLine = { bg = colors.selection },
 
     Normal = { fg = colors.text, bg = colors.background },
     NormalFloat = { link = "Normal" },
@@ -20,3 +21,5 @@ function M.setup()
 
   hi(groups)
 end
+
+return M
