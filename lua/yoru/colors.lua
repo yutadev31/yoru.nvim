@@ -1,0 +1,15 @@
+return {
+  background = "NONE",
+  selection = "#424457",
+  text = "#f9f9fa",
+  white = "#b9bac6",
+  black = "#6e7087",
+  red = "#ff7a7a",
+  orange = "#ffab7a",
+  yellow = "#ffe27a",
+  green = "#95ff7a",
+  cyan = "#7affe4",
+  blue = "#7ab2ff",
+  purple = "#b87aff",
+  magenta = "#ff7ace",
+}
