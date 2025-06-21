@@ -23,7 +23,7 @@ function M.setup()
     Visual = { bg = colors.selection },
     Whitespace = { fg = colors.white },
     TabLine = { bg = colors.background },
-    TabLineSel = { fg = colors.black, bg = colors.blue },
+    TabLineSel = { fg = colors.text, bg = colors.blue },
 
     -- Main Text
     Normal = { fg = colors.text, bg = colors.background },
@@ -31,6 +31,18 @@ function M.setup()
 
     -- Syntax Highlighting
     Comment = { fg = colors.white },
+    String = { fg = colors.green },
+    Character = { fg = colors.green },
+    Number = { fg = colors.cyan },
+    Boolean = { fg = colors.cyan },
+    Identifier = { fg = colors.text },
+    Function = { fg = colors.purple },
+    Keyword = { fg = colors.magenta },
+    Type = { fg = colors.yellow },
+    Special = { fg = colors.yellow },
+    Tag = { fg = colors.magenta },
+    Delimiter = { fg = colors.white },
+    Debug = { fg = colors.yellow },
 
     -- Oil.nvim
     OilHidden = { fg = colors.gray },
@@ -53,12 +65,12 @@ function M.setup()
     StatusLineCommandB = { fg = colors.yellow, bg = colors.selection },
     StatusLineTerminalB = { fg = colors.orange, bg = colors.selection },
 
-    StatusLineNormalC = { fg = colors.white, bg = colors.black },
-    StatusLineInsertC = { fg = colors.white, bg = colors.black },
-    StatusLineVisualC = { fg = colors.white, bg = colors.black },
-    StatusLineReplaceC = { fg = colors.white, bg = colors.black },
-    StatusLineCommandC = { fg = colors.white, bg = colors.black },
-    StatusLineTerminalC = { fg = colors.white, bg = colors.black },
+    StatusLineNormalC = { fg = colors.white, bg = colors.selection },
+    StatusLineInsertC = { fg = colors.white, bg = colors.selection },
+    StatusLineVisualC = { fg = colors.white, bg = colors.selection },
+    StatusLineReplaceC = { fg = colors.white, bg = colors.selection },
+    StatusLineCommandC = { fg = colors.white, bg = colors.selection },
+    StatusLineTerminalC = { fg = colors.white, bg = colors.selection },
   }
 
   hi(groups)
