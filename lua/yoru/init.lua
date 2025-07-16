@@ -117,6 +117,14 @@ function M.setup()
     MiniIconsRed = { fg = colors.red },
     MiniIconsYellow = { fg = colors.yellow },
 
+    -- Mini Statusline
+    MiniStatuslineModeNormal = { fg = colors.background, bg = colors.blue },
+    MiniStatuslineModeInsert = { fg = colors.background, bg = colors.green },
+    MiniStatuslineModeVisual = { fg = colors.background, bg = colors.purple },
+    MiniStatuslineModeReplace = { fg = colors.background, bg = colors.red },
+    MiniStatuslineModeCommand = { fg = colors.background, bg = colors.yellow },
+    MiniStatuslineModeOther = { fg = colors.background, bg = colors.orange },
+
     -- Statusline (Simple.nvim)
     StatusLineNormalA = { fg = colors.background, bg = colors.blue, bold = true },
     StatusLineInsertA = { fg = colors.background, bg = colors.green, bold = true },
