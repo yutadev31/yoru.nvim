@@ -124,6 +124,9 @@ function M.setup()
     MiniStatuslineModeReplace = { fg = colors.background, bg = colors.red },
     MiniStatuslineModeCommand = { fg = colors.background, bg = colors.yellow },
     MiniStatuslineModeOther = { fg = colors.background, bg = colors.orange },
+    MiniStatuslineDevinfo = { fg = colors.text, bg = colors.selection },
+    MiniStatuslineFilename = { fg = colors.white, bg = colors.selection },
+    MiniStatuslineFileinfo = { fg = colors.text, bg = colors.selection },
 
     -- Statusline (Simple.nvim)
     StatusLineNormalA = { fg = colors.background, bg = colors.blue, bold = true },
