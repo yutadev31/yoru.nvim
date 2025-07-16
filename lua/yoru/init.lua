@@ -41,7 +41,7 @@ function M.setup()
     Boolean = { fg = colors.cyan },
     Identifier = { fg = colors.blue },
     Function = { fg = colors.purple },
-    Keyword = { fg = colors.magenta },
+    Keyword = { fg = colors.red },
     Type = { fg = colors.yellow },
     Special = { fg = colors.yellow },
     Tag = { fg = colors.magenta },
