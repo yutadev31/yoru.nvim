@@ -1,9 +1,9 @@
 return {
   background = "NONE",
-  selection = "#424457",
+  selection = "#414357",
   text = "#f9f9fa",
-  white = "#b9bac6",
-  black = "#6e7087",
+  white = "#b8b9c5",
+  black = "#6e7086",
   red = "#ed9191",
   orange = "#edb391",
   yellow = "#edd991",
