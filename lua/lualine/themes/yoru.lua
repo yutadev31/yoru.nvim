@@ -31,4 +31,5 @@ return {
     b = { bg = colors.background2, fg = colors.red },
     c = { bg = colors.background1, fg = colors.text },
   },
+  inactive = {},
 }
