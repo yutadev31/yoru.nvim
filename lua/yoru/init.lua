@@ -15,13 +15,13 @@ function M.setup()
     Cursor = { fg = colors.text },
     CursorLine = { bg = colors.selection },
     CursorLineNr = { fg = colors.text },
-    LineNr = { fg = colors.white },
-    EndOfBuffer = { fg = colors.white },
+    LineNr = { fg = colors.text1 },
+    EndOfBuffer = { fg = colors.text1 },
     Directory = { fg = colors.blue },
-    WinSeparator = { fg = colors.white },
+    WinSeparator = { fg = colors.text1 },
     FloatBorder = { link = "WinSeparator" },
     Visual = { bg = colors.selection },
-    Whitespace = { fg = colors.white },
+    Whitespace = { fg = colors.text1 },
     TabLine = { bg = colors.background },
     TabLineSel = { fg = colors.text, bg = colors.blue },
 
@@ -34,7 +34,7 @@ function M.setup()
     Todo = { link = "DiagnosticInfo" },
 
     -- Syntax Highlighting
-    Comment = { fg = colors.white },
+    Comment = { fg = colors.text1 },
     String = { fg = colors.green },
     Character = { fg = colors.green },
     Number = { fg = colors.cyan },
@@ -45,7 +45,7 @@ function M.setup()
     Type = { fg = colors.yellow },
     Special = { fg = colors.yellow },
     Tag = { fg = colors.magenta },
-    Delimiter = { fg = colors.white },
+    Delimiter = { fg = colors.text1 },
     Debug = { fg = colors.yellow },
 
     -- Diff
@@ -55,7 +55,7 @@ function M.setup()
 
     -- Completion / Popups
     Pmenu = { fg = colors.text, bg = colors.selection },
-    PmenuSel = { fg = colors.black, bg = colors.blue },
+    PmenuSel = { fg = colors.text2, bg = colors.blue },
     NotifyBackground = { bg = colors.selection },
 
     -- Diagnostics
@@ -101,17 +101,17 @@ function M.setup()
     ["@lsp.type.namespace"] = { link = "Module" },
 
     -- Oil.nvim
-    OilHidden = { fg = colors.white },
+    OilHidden = { fg = colors.text1 },
     OilDir = { link = "Directory" },
     OilDirHidden = { link = "OilHidden" },
-    OilFile = { fg = colors.white },
+    OilFile = { fg = colors.text1 },
 
     -- Mini Icons
     MiniIconsAzure = { fg = colors.blue },
     MiniIconsBlue = { fg = colors.blue },
     MiniIconsCyan = { fg = colors.cyan },
     MiniIconsGreen = { fg = colors.green },
-    MiniIconsGrey = { fg = colors.white },
+    MiniIconsGrey = { fg = colors.text1 },
     MiniIconsOrange = { fg = colors.orange },
     MiniIconsPurple = { fg = colors.purple },
     MiniIconsRed = { fg = colors.red },
@@ -125,30 +125,8 @@ function M.setup()
     MiniStatuslineModeCommand = { fg = colors.background, bg = colors.yellow },
     MiniStatuslineModeOther = { fg = colors.background, bg = colors.orange },
     MiniStatuslineDevinfo = { fg = colors.text, bg = colors.selection },
-    MiniStatuslineFilename = { fg = colors.white, bg = colors.selection },
+    MiniStatuslineFilename = { fg = colors.text1, bg = colors.selection },
     MiniStatuslineFileinfo = { fg = colors.text, bg = colors.selection },
-
-    -- Statusline (Simple.nvim)
-    StatusLineNormalA = { fg = colors.background, bg = colors.blue, bold = true },
-    StatusLineInsertA = { fg = colors.background, bg = colors.green, bold = true },
-    StatusLineVisualA = { fg = colors.background, bg = colors.purple, bold = true },
-    StatusLineReplaceA = { fg = colors.background, bg = colors.red, bold = true },
-    StatusLineCommandA = { fg = colors.background, bg = colors.yellow, bold = true },
-    StatusLineTerminalA = { fg = colors.background, bg = colors.orange, bold = true },
-
-    StatusLineNormalB = { fg = colors.blue, bg = colors.selection },
-    StatusLineInsertB = { fg = colors.green, bg = colors.selection },
-    StatusLineVisualB = { fg = colors.purple, bg = colors.selection },
-    StatusLineReplaceB = { fg = colors.red, bg = colors.selection },
-    StatusLineCommandB = { fg = colors.yellow, bg = colors.selection },
-    StatusLineTerminalB = { fg = colors.orange, bg = colors.selection },
-
-    StatusLineNormalC = { fg = colors.white, bg = colors.selection },
-    StatusLineInsertC = { fg = colors.white, bg = colors.selection },
-    StatusLineVisualC = { fg = colors.white, bg = colors.selection },
-    StatusLineReplaceC = { fg = colors.white, bg = colors.selection },
-    StatusLineCommandC = { fg = colors.white, bg = colors.selection },
-    StatusLineTerminalC = { fg = colors.white, bg = colors.selection },
   }
 
   hi(groups)
