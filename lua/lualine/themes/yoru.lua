@@ -31,5 +31,9 @@ return {
     b = { bg = colors.background2, fg = colors.red },
     c = { bg = colors.background1, fg = colors.text },
   },
-  inactive = {},
+  inactive = {
+    a = { bg = colors.text1, fg = colors.background, gui = "bold" },
+    b = { bg = colors.background2, fg = colors.text1 },
+    c = { bg = colors.background1, fg = colors.text },
+  },
 }
