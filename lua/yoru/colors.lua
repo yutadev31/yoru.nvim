@@ -1,8 +1,8 @@
 return {
-  background1 = "#1c1d2a",
-  background2 = "#222434",
-  background = "#2c2e43",
-  selection = "#6e7086",
+  background1 = "#101018",
+  background2 = "#181924",
+  background = "#1e1f2d",
+  selection = "#444654",
   text2 = "#9c9eae",
   text1 = "#c1c2cc",
   text = "#f9f9fa",
