@@ -1,5 +1,5 @@
 return {
-  background = "#1e1f2d",
+  background = "NONE",
   background1 = "#282a3d",
   background2 = "#33354c",
   selection = "#444654",
