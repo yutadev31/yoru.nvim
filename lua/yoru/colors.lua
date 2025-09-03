@@ -1,7 +1,7 @@
 return {
-  background1 = "#181a2e",
-  background2 = "#1e2038",
-  background = "#272a48",
+  background1 = "#1c1d2a",
+  background2 = "#222434",
+  background = "#2c2e43",
   selection = "#6e7086",
   text2 = "#9c9eae",
   text1 = "#c1c2cc",
