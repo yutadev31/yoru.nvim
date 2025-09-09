@@ -127,6 +127,11 @@ function M.setup()
     MiniStatuslineDevinfo = { fg = colors.fg, bg = colors.selection },
     MiniStatuslineFilename = { fg = colors.white, bg = colors.selection },
     MiniStatuslineFileinfo = { fg = colors.fg, bg = colors.selection },
+
+    -- barbar
+    BufferCurrent = { bg = colors.blue, fg = colors.fg },
+    BufferVisible = { bg = colors.overlay, fg = colors.fg },
+    BufferInactive = { bg = colors.overlay, fg = colors.white },
   }
 
   hi(groups)
