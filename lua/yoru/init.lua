@@ -12,21 +12,21 @@ function M.setup()
 
   local groups = {
     -- UI Elements
-    Cursor = { fg = colors.text },
+    Cursor = { fg = colors.fg },
     CursorLine = { bg = colors.selection },
-    CursorLineNr = { fg = colors.text },
-    LineNr = { fg = colors.text1 },
-    EndOfBuffer = { fg = colors.text2 },
+    CursorLineNr = { fg = colors.fg },
+    LineNr = { fg = colors.white },
+    EndOfBuffer = { fg = colors.black },
     Directory = { fg = colors.blue },
-    WinSeparator = { fg = colors.text2 },
+    WinSeparator = { fg = colors.black },
     FloatBorder = { link = "WinSeparator" },
     Visual = { bg = colors.selection },
-    Whitespace = { fg = colors.text1 },
-    TabLine = { bg = colors.background },
-    TabLineSel = { fg = colors.text, bg = colors.blue },
+    Whitespace = { fg = colors.white },
+    TabLine = { bg = colors.bg },
+    TabLineSel = { fg = colors.fg, bg = colors.blue },
 
     -- Main Text
-    Normal = { fg = colors.text, bg = colors.background },
+    Normal = { fg = colors.fg, bg = "NONE" },
     NormalFloat = { link = "Normal" },
     Underlined = { fg = colors.green },
     Ignore = { fg = colors.blue },
@@ -34,7 +34,7 @@ function M.setup()
     Todo = { link = "DiagnosticInfo" },
 
     -- Syntax Highlighting
-    Comment = { fg = colors.text1 },
+    Comment = { fg = colors.white },
     String = { fg = colors.green },
     Character = { fg = colors.green },
     Number = { fg = colors.cyan },
@@ -45,7 +45,7 @@ function M.setup()
     Type = { fg = colors.yellow },
     Special = { fg = colors.yellow },
     Tag = { fg = colors.magenta },
-    Delimiter = { fg = colors.text1 },
+    Delimiter = { fg = colors.white },
     Debug = { fg = colors.yellow },
 
     -- Diff
@@ -54,9 +54,9 @@ function M.setup()
     Removed = { fg = colors.magenta },
 
     -- Completion / Popups
-    Pmenu = { fg = colors.text, bg = colors.selection },
-    PmenuSel = { fg = colors.text2, bg = colors.blue },
-    NotifyBackground = { bg = colors.selection },
+    Pmenu = { fg = colors.fg, bg = colors.selection },
+    PmenuSel = { fg = colors.black, bg = colors.blue },
+    Notifybg = { bg = colors.selection },
 
     -- Diagnostics
     DiagnosticError = { fg = colors.red },
@@ -101,32 +101,32 @@ function M.setup()
     ["@lsp.type.namespace"] = { link = "Module" },
 
     -- Oil.nvim
-    OilHidden = { fg = colors.text1 },
+    OilHidden = { fg = colors.white },
     OilDir = { link = "Directory" },
     OilDirHidden = { link = "OilHidden" },
-    OilFile = { fg = colors.text1 },
+    OilFile = { fg = colors.white },
 
     -- Mini Icons
     MiniIconsAzure = { fg = colors.blue },
     MiniIconsBlue = { fg = colors.blue },
     MiniIconsCyan = { fg = colors.cyan },
     MiniIconsGreen = { fg = colors.green },
-    MiniIconsGrey = { fg = colors.text1 },
+    MiniIconsGrey = { fg = colors.white },
     MiniIconsOrange = { fg = colors.orange },
     MiniIconsPurple = { fg = colors.purple },
     MiniIconsRed = { fg = colors.red },
     MiniIconsYellow = { fg = colors.yellow },
 
     -- Mini Statusline
-    MiniStatuslineModeNormal = { fg = colors.background, bg = colors.blue },
-    MiniStatuslineModeInsert = { fg = colors.background, bg = colors.green },
-    MiniStatuslineModeVisual = { fg = colors.background, bg = colors.purple },
-    MiniStatuslineModeReplace = { fg = colors.background, bg = colors.red },
-    MiniStatuslineModeCommand = { fg = colors.background, bg = colors.yellow },
-    MiniStatuslineModeOther = { fg = colors.background, bg = colors.orange },
-    MiniStatuslineDevinfo = { fg = colors.text, bg = colors.selection },
-    MiniStatuslineFilename = { fg = colors.text1, bg = colors.selection },
-    MiniStatuslineFileinfo = { fg = colors.text, bg = colors.selection },
+    MiniStatuslineModeNormal = { fg = colors.bg, bg = colors.blue },
+    MiniStatuslineModeInsert = { fg = colors.bg, bg = colors.green },
+    MiniStatuslineModeVisual = { fg = colors.bg, bg = colors.purple },
+    MiniStatuslineModeReplace = { fg = colors.bg, bg = colors.red },
+    MiniStatuslineModeCommand = { fg = colors.bg, bg = colors.yellow },
+    MiniStatuslineModeOther = { fg = colors.bg, bg = colors.orange },
+    MiniStatuslineDevinfo = { fg = colors.fg, bg = colors.selection },
+    MiniStatuslineFilename = { fg = colors.white, bg = colors.selection },
+    MiniStatuslineFileinfo = { fg = colors.fg, bg = colors.selection },
   }
 
   hi(groups)
