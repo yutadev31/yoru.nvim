@@ -22,7 +22,7 @@ function M.setup()
     FloatBorder = { link = "WinSeparator" },
     Visual = { bg = colors.selection },
     Whitespace = { fg = colors.white },
-    TabLine = { bg = colors.bg },
+    TabLine = { bg = colors.overlay },
     TabLineSel = { fg = colors.fg, bg = colors.blue },
 
     -- Main Text
@@ -147,7 +147,8 @@ function M.setup()
     BufferTabpages = { bg = colors.overlay, fg = "NONE" },
     BufferTabpage = { bg = colors.overlay, fg = colors.blue },
   }
-  BufferVisibleTarget = { bg = colors.blue, fg = colors.red }, hi(groups)
+
+  hi(groups)
 end
 
 return M
