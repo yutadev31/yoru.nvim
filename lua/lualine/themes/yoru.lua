@@ -33,7 +33,7 @@ return {
   },
   inactive = {
     a = { bg = colors.fg1, fg = colors.bg, gui = "bold" },
-    b = { bg = colors.statusbar, fg = colors.fg1 },
+    b = { bg = colors.statusbar, fg = colors.white },
     c = { bg = colors.bg, fg = colors.fg },
   },
 }
