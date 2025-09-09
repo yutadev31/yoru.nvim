@@ -1,8 +1,8 @@
 return {
   fg = "#f2f2f2",
-  bg = "#0f111a",
-  overlay = "#191b25",
-  selection = "#2d2f39",
+  bg = "#292d3d",
+  overlay = "#33374d",
+  selection = "#3d425c",
   white = "#d9d9d9",
   black = "#c7c7c7",
   red = "#ec7979",
