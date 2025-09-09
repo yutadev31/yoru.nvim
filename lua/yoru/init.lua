@@ -130,11 +130,24 @@ function M.setup()
 
     -- barbar
     BufferCurrent = { bg = colors.blue, fg = colors.fg },
+    BufferCurrentIndex = { bg = colors.blue, fg = colors.blue },
+    BufferCurrentMod = { bg = colors.blue, fg = colors.yellow },
+    BufferCurrentSign = { bg = colors.blue, fg = colors.blue },
+    BufferCurrentTarget = { bg = colors.blue, fg = colors.red },
     BufferVisible = { bg = colors.overlay, fg = colors.fg },
+    BufferVisibleIndex = { bg = colors.overlay, fg = colors.blue },
+    BufferVisibleMod = { bg = colors.overlay, fg = colors.yellow },
+    BufferVisibleSign = { bg = colors.overlay, fg = colors.blue },
+    BufferVisibleTarget = { bg = colors.overlay, fg = colors.red },
     BufferInactive = { bg = colors.overlay, fg = colors.white },
+    BufferInactiveIndex = { bg = colors.overlay, fg = colors.blue },
+    BufferInactiveMod = { bg = colors.overlay, fg = colors.yellow },
+    BufferInactiveSign = { bg = colors.overlay, fg = colors.blue },
+    BufferInactiveTarget = { bg = colors.overlay, fg = colors.red },
+    BufferTabpages = { bg = colors.overlay, fg = "NONE" },
+    BufferTabpage = { bg = colors.overlay, fg = colors.blue },
   }
-
-  hi(groups)
+  BufferVisibleTarget = { bg = colors.blue, fg = colors.red }, hi(groups)
 end
 
 return M
