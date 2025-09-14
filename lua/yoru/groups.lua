@@ -77,7 +77,7 @@ function M.get()
     ["@number.float"] = { link = "Float" },
     ["@type"] = { link = "Type" },
     ["@type.builtin"] = { link = "Keyword" },
-    ["@property"] = { fg = colors.magenta },
+    ["@property"] = { fg = colors.orange },
     ["@function"] = { link = "Function" },
     ["@function.builtin"] = { link = "Function" },
     ["@keyword"] = { link = "Keyword" },
