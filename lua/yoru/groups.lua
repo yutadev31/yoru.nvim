@@ -167,6 +167,7 @@ function M.get()
     RenderMarkdownDash = { fg = colors.orange },
     RenderMarkdownTableHead = { fg = colors.white },
     RenderMarkdownTableRow = { fg = colors.white },
+    RenderMarkdownLink = { fg = colors.blue },
     RenderMarkdownH1Bg = { bg = utils.mix_hex(colors.bg, colors.red, 0.1) },
     RenderMarkdownH2Bg = { bg = utils.mix_hex(colors.bg, colors.orange, 0.1) },
     RenderMarkdownH3Bg = { bg = utils.mix_hex(colors.bg, colors.yellow, 0.1) },
