@@ -1,7 +1,7 @@
 local M = {}
 
 function M.get()
-  local C = require("yoru.colors")
+  local C = require("yoru.palette")
 
   return {
     -- UI Elements
@@ -19,8 +19,8 @@ function M.get()
     TabLineSel = { fg = C.fg, bg = C.bg },
 
     -- Main Text
-    Normal = { fg = C.fg, bg = C.none },
-    NormalFloat = { fg = C.fg, bg = C.none },
+    Normal = { fg = C.fg, bg = C.bg },
+    NormalFloat = { fg = C.fg, bg = C.bg },
     Underlined = { fg = C.green },
     Ignore = { fg = C.blue },
     Error = { link = "DiagnosticError" },
@@ -151,7 +151,7 @@ function M.get()
     BufferInactiveMod = { bg = C.bg_light, fg = C.yellow },
     BufferInactiveSign = { bg = C.bg_light, fg = C.bg },
     BufferInactiveTarget = { bg = C.bg_light, fg = C.red },
-    BufferTabpages = { bg = C.bg_light, fg = "NONE" },
+    BufferTabpages = { bg = C.bg_light, fg = C.none },
     BufferTabpage = { bg = C.bg_light, fg = C.blue },
 
     -- Neotree
@@ -173,6 +173,15 @@ function M.get()
     RenderMarkdownH4Bg = { bg = C.green_light },
     RenderMarkdownH5Bg = { bg = C.blue_light },
     RenderMarkdownH6Bg = { bg = C.purple_light },
+
+    -- Snacks
+    SnacksDashboardDesc = { fg = C.blue },
+    SnacksDashboardFooter = { fg = C.blue },
+    SnacksDashboardHeader = { fg = C.blue },
+    SnacksDashboardIcon = { fg = C.blue },
+    SnacksDashboardKey = { fg = C.yellow },
+    SnacksDashboardSpecial = { fg = C.purple },
+    SnacksDashboardDir = { fg = C.white },
   }
 end
 

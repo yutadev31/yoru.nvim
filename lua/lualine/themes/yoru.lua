@@ -1,4 +1,4 @@
-local colors = require("yoru.colors")
+local colors = require("yoru.palette")
 
 return {
   normal = {
