@@ -19,7 +19,7 @@ function M.get()
     TabLineSel = { fg = C.fg, bg = C.bg },
 
     -- Main Text
-    Normal = { fg = C.fg, bg = C.bg },
+    Normal = { fg = C.fg, bg = C.none },
     NormalFloat = { fg = C.fg, bg = C.bg },
     Underlined = { fg = C.green },
     Ignore = { fg = C.blue },
