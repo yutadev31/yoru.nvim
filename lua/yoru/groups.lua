@@ -176,12 +176,13 @@ function M.get()
 
     -- Snacks
     SnacksDashboardDesc = { fg = C.blue },
-    SnacksDashboardFooter = { fg = C.blue },
-    SnacksDashboardHeader = { fg = C.blue },
+    SnacksDashboardFooter = { fg = C.green },
+    SnacksDashboardHeader = { fg = C.green },
     SnacksDashboardIcon = { fg = C.blue },
-    SnacksDashboardKey = { fg = C.yellow },
+    SnacksDashboardKey = { fg = C.red },
     SnacksDashboardSpecial = { fg = C.purple },
-    SnacksDashboardDir = { fg = C.white },
+    SnacksDashboardDir = { fg = C.yellow },
+    SnacksDashboardFile = { fg = C.yellow },
   }
 end
 
