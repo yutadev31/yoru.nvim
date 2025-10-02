@@ -82,6 +82,39 @@ white = "{palette["white"]}"
         f.write(buf)
 
 
+def generate_windows_terminal(palette: dict[str, str]):
+    buf = (
+        "{"
+        + f"""
+  "background": "{palette["bg"]}",
+  "black": "{palette["black"]}",
+  "blue": "{palette["blue"]}",
+  "brightBlack": "{palette["black"]}",
+  "brightBlue": "{palette["blue"]}",
+  "brightCyan": "{palette["cyan"]}",
+  "brightGreen": "{palette["green"]}",
+  "brightPurple": "{palette["purple"]}",
+  "brightRed": "{palette["red"]}",
+  "brightWhite": "{palette["white"]}",
+  "brightYellow": "{palette["yellow"]}",
+  "cursorColor": "{palette["white"]}",
+  "cyan": "{palette["cyan"]}",
+  "foreground": "{palette["fg"]}",
+  "green": "{palette["green"]}",
+  "name": "Yoru",
+  "purple": "{palette["purple"]}",
+  "red": "{palette["red"]}",
+  "selectionBackground": "{palette["selection"]}",
+  "white": "{palette["white"]}",
+  "yellow": "{palette["yellow"]}"
+"""
+        + "}\n"
+    )
+
+    with open("extras/windows-terminal/yoru.json", "w", encoding="utf-8") as f:
+        f.write(buf)
+
+
 with open("./palette.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
@@ -89,3 +122,4 @@ palette = {k: hsl_to_hex(v) for k, v in data.items()}
 
 generate_nvim(palette)
 generate_alacritty(palette)
+generate_windows_terminal(palette)

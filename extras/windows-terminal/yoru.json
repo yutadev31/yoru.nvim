@@ -1,0 +1,23 @@
+{
+  "background": "#252537",
+  "black": "#565681",
+  "blue": "#99b2ff",
+  "brightBlack": "#565681",
+  "brightBlue": "#99b2ff",
+  "brightCyan": "#99ffff",
+  "brightGreen": "#99ffad",
+  "brightPurple": "#dd99ff",
+  "brightRed": "#ff9999",
+  "brightWhite": "#d1d1e0",
+  "brightYellow": "#ffe499",
+  "cursorColor": "#d1d1e0",
+  "cyan": "#99ffff",
+  "foreground": "#f2f2f2",
+  "green": "#99ffad",
+  "name": "Yoru",
+  "purple": "#dd99ff",
+  "red": "#ff9999",
+  "selectionBackground": "#3d3d5c",
+  "white": "#d1d1e0",
+  "yellow": "#ffe499"
+}
