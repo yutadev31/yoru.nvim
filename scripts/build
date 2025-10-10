@@ -50,12 +50,12 @@ background = "{palette["bg"]}"
 foreground = "{palette["fg"]}"
 
 [colors.cursor]
-text = "{palette["black"]}"
+text = "CellForeground"
 cursor = "{palette["white"]}"
 
 [colors.selection]
-text = "{palette["black"]}"
-background = "{palette["white"]}"
+text = "CellForeground"
+background = "{palette["selection"]}"
 
 [colors.normal]
 black = "{palette["black"]}"

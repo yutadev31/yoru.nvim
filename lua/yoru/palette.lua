@@ -8,14 +8,14 @@ local C = {
   bg_light = "#2d2d43",
   selection = "#3d3d5c",
   white = "#d1d1e0",
-  black = "#565681",
-  red = "#ff9999",
-  orange = "#ffbe99",
-  yellow = "#ffe499",
-  green = "#99ffad",
-  cyan = "#99ffff",
-  blue = "#99b2ff",
-  purple = "#dd99ff",
+  black = "#5c5c8a",
+  red = "#ff8f8f",
+  orange = "#ffb88f",
+  yellow = "#ffe18f",
+  green = "#8fffa5",
+  cyan = "#8fecff",
+  blue = "#8fabff",
+  purple = "#da8fff",
 }
 
 C.red_light = U.mix_hex(C.bg, C.red, 0.1)
