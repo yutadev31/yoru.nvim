@@ -19,7 +19,7 @@ function M.get()
     TabLineSel = { fg = C.fg, bg = C.bg },
 
     -- Main Text
-    Normal = { fg = C.fg, bg = C.none },
+    Normal = { fg = C.fg, bg = C.bg },
     NormalFloat = { fg = C.fg, bg = C.bg },
     Underlined = { fg = C.green },
     Ignore = { fg = C.blue },
@@ -151,7 +151,7 @@ function M.get()
     BufferInactiveMod = { bg = C.bg_light, fg = C.yellow },
     BufferInactiveSign = { bg = C.bg_light, fg = C.bg },
     BufferInactiveTarget = { bg = C.bg_light, fg = C.red },
-    BufferTabpages = { bg = C.bg_light, fg = C.none },
+    BufferTabpages = { bg = C.bg_light, fg = C.bg },
     BufferTabpage = { bg = C.bg_light, fg = C.blue },
 
     -- Neotree

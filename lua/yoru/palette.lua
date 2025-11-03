@@ -1,7 +1,6 @@
 local U = require("yoru.utils.color")
 
 local C = {
-  none = "NONE",
   fg = "#f2f2f2",
   bg = "#252537",
   bg_dark = "#1f1f2e",
