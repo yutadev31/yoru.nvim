@@ -1,20 +1,21 @@
-local U = require("yoru.utils.color")
+local U = require("yoru.utils")
 
 local C = {
+  none = "NONE",
   fg = "#f2f2f2",
-  bg = "#252537",
-  bg_dark = "#1f1f2e",
-  bg_light = "#2d2d43",
-  selection = "#3d3d5c",
-  white = "#d1d1e0",
-  black = "#5c5c8a",
-  red = "#ff8f8f",
-  orange = "#ffb88f",
-  yellow = "#ffe18f",
-  green = "#8fffa5",
-  cyan = "#8fecff",
-  blue = "#8fabff",
-  purple = "#da8fff",
+  bg = "#232538",
+  bg_dark = "#1d1f2f",
+  bg_light = "#2b2d45",
+  selection = "#3b3e5e",
+  white = "#d1d2e0",
+  black = "#5c608a",
+  red = "#ff8080",
+  orange = "#ffae80",
+  yellow = "#ffdd80",
+  green = "#80ff99",
+  cyan = "#80eaff",
+  blue = "#809fff",
+  purple = "#d580ff",
 }
 
 C.red_light = U.mix_hex(C.bg, C.red, 0.1)
