@@ -23,7 +23,7 @@ def hsl_to_hex(hsl_str):
 
 
 def generate_nvim(palette: dict[str, str]):
-    buf = 'local U = require("yoru.utils.color")\n\n'
+    buf = 'local U = require("yoru.utils")\n\n'
     buf += "local C = {\n"
     buf += f'  none = "NONE",\n'
     for color in palette.keys():
@@ -115,6 +115,91 @@ def generate_windows_terminal(palette: dict[str, str]):
         f.write(buf)
 
 
+def generate_btop(palette: dict[str, str]):
+    buf = f"""# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg] = ""
+
+# Main text color
+theme[main_fg] = "{palette["fg"]}"
+
+# Title color for boxes
+theme[title] = "{palette["fg"]}"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg] = "{palette["orange"]}"
+
+# Background color of selected item in processes box
+theme[selected_bg] = "{palette["orange"]}"
+
+# Foreground color of selected item in processes box
+theme[selected_fg] = "{palette["fg"]}"
+
+# Color of inactive/disabled text
+theme[inactive_fg] = "{palette["white"]}"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc] = "{palette["blue"]}"
+
+# Cpu box outline color
+theme[cpu_box] = "{palette["black"]}"
+
+# Memory/disks box outline color
+theme[mem_box] = "{palette["black"]}"
+
+# Net up/down box outline color
+theme[net_box] = "{palette["black"]}"
+
+# Processes box outline color
+theme[proc_box] = "{palette["black"]}"
+
+# Box divider line and small boxes line color
+theme[div_line] = "{palette["black"]}"
+
+# Temperature graph colors
+theme[temp_start] = "{palette["green"]}"
+theme[temp_mid] = "{palette["orange"]}"
+theme[temp_end] = "{palette["red"]}"
+
+# CPU graph colors
+theme[cpu_start] = "{palette["green"]}"
+theme[cpu_mid] = "{palette["orange"]}"
+theme[cpu_end] = "{palette["red"]}"
+
+# Mem/Disk free meter
+theme[free_start] = "{palette["green"]}"
+theme[free_mid] = "{palette["orange"]}"
+theme[free_end] = "{palette["red"]}"
+
+# Mem/Disk cached meter
+theme[cached_start] = "{palette["green"]}"
+theme[cached_mid] = "{palette["orange"]}"
+theme[cached_end] = "{palette["red"]}"
+
+# Mem/Disk available meter
+theme[available_start] = "{palette["green"]}"
+theme[available_mid] = "{palette["orange"]}"
+theme[available_end] = "{palette["red"]}"
+
+# Mem/Disk used meter
+theme[used_start] = "{palette["green"]}"
+theme[used_mid] = "{palette["orange"]}"
+theme[used_end] = "{palette["red"]}"
+
+# Download graph colors
+theme[download_start] = "{palette["green"]}"
+theme[download_mid] = "{palette["orange"]}"
+theme[download_end] = "{palette["red"]}"
+
+# Upload graph colors
+theme[upload_start] = "{palette["green"]}"
+theme[upload_mid] = "{palette["orange"]}"
+theme[upload_end] = "{palette["red"]}"
+"""
+
+    with open("extras/btop/yoru.theme", "w", encoding="utf-8") as f:
+        f.write(buf)
+
+
 with open("./palette.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
@@ -123,3 +208,4 @@ palette = {k: hsl_to_hex(v) for k, v in data.items()}
 generate_nvim(palette)
 generate_alacritty(palette)
 generate_windows_terminal(palette)
+generate_btop(palette)

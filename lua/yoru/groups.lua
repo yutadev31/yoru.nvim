@@ -109,10 +109,10 @@ function M.get()
     ["@lsp.type.namespace"] = { link = "Module" },
 
     -- Oil.nvim
-    OilHidden = { fg = C.white },
+    OilHidden = { fg = C.fg },
     OilDir = { link = "Directory" },
     OilDirHidden = { link = "OilHidden" },
-    OilFile = { fg = C.white },
+    OilFile = { fg = C.fg },
 
     -- Mini Icons
     MiniIconsAzure = { fg = C.blue },
