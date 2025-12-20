@@ -4,23 +4,20 @@ function M.get()
   local C = require("yoru.palette")
 
   return {
-    -- UI Elements
     Cursor = { fg = C.fg },
-    CursorLine = { bg = C.selection },
-    CursorLineNr = { fg = C.orange },
+    CursorLine = { bg = C.bg_light },
     LineNr = { fg = C.black },
+    CursorLineNr = { fg = C.orange },
     EndOfBuffer = { fg = C.black },
-    Directory = { fg = C.blue },
     WinSeparator = { fg = C.black },
     FloatBorder = { fg = C.black },
     Visual = { bg = C.selection },
     Whitespace = { fg = C.white },
-    TabLine = { bg = C.bg_light },
-    TabLineSel = { fg = C.fg, bg = C.bg },
     CurSearch = { fg = C.fg, bg = C.orange },
     Search = { fg = C.fg, bg = C.blue },
+    TabLine = { bg = C.bg_light },
+    TabLineSel = { fg = C.fg, bg = C.bg },
 
-    -- Main Text
     Normal = { fg = C.fg, bg = C.none },
     NormalFloat = { fg = C.fg, bg = C.none },
     Underlined = { fg = C.green },
@@ -28,33 +25,30 @@ function M.get()
     Error = { link = "DiagnosticError" },
     Todo = { link = "DiagnosticInfo" },
 
-    -- Syntax Highlighting
     Comment = { fg = C.white },
     String = { fg = C.green },
     Character = { fg = C.green },
     Constant = { fg = C.orange },
     Number = { fg = C.cyan },
     Boolean = { fg = C.cyan },
-    Identifier = { fg = C.blue },
-    Function = { fg = C.purple },
-    Keyword = { fg = C.red },
+    Identifier = { fg = C.fg },
+    Function = { fg = C.blue },
+    Keyword = { fg = C.purple },
     Type = { fg = C.yellow },
     Special = { fg = C.yellow },
-    Tag = { fg = C.magenta },
+    Tag = { fg = C.purple },
     Delimiter = { fg = C.white },
     Debug = { fg = C.yellow },
+    Directory = { fg = C.blue },
 
-    -- Diff
     Added = { fg = C.green },
     Changed = { fg = C.blue },
-    Removed = { fg = C.purple },
+    Removed = { fg = C.red },
 
-    -- Completion / Popups
-    Pmenu = { fg = C.fg, bg = C.selection },
-    PmenuSel = { fg = C.black, bg = C.blue },
+    Pmenu = { fg = C.fg, bg = C.black },
+    PmenuSel = { fg = C.fg, bg = C.selection },
     Notifybg = { bg = C.selection },
 
-    -- Diagnostics
     DiagnosticError = { fg = C.red },
     DiagnosticWarn = { fg = C.yellow },
     DiagnosticInfo = { fg = C.blue },
@@ -66,7 +60,6 @@ function M.get()
     DiagnosticUnderlineHint = { sp = C.purple, undercurl = true },
     DiagnosticUnderlineOk = { sp = C.green, undercurl = true },
 
-    -- Treesitter
     ["@variable"] = { link = "Identifier" },
     ["@constant"] = { link = "Constant" },
     ["@module"] = { fg = C.yellow },
@@ -78,7 +71,7 @@ function M.get()
     ["@number.float"] = { link = "Float" },
     ["@type"] = { link = "Type" },
     ["@type.builtin"] = { link = "Keyword" },
-    ["@property"] = { fg = C.orange },
+    ["@property"] = { fg = C.red },
     ["@function"] = { link = "Function" },
     ["@function.builtin"] = { link = "Function" },
     ["@keyword"] = { link = "Keyword" },
@@ -104,17 +97,13 @@ function M.get()
     ["@diff.delta"] = { link = "Changed" },
     ["@tag"] = { link = "Tag" },
     ["@tag.attribute"] = { link = "@property" },
-
-    -- LSP
     ["@lsp.type.namespace"] = { link = "Module" },
 
-    -- Oil.nvim
     OilHidden = { fg = C.fg },
     OilDir = { link = "Directory" },
     OilDirHidden = { link = "OilHidden" },
     OilFile = { fg = C.fg },
 
-    -- Mini Icons
     MiniIconsAzure = { fg = C.blue },
     MiniIconsBlue = { fg = C.blue },
     MiniIconsCyan = { fg = C.cyan },
@@ -125,18 +114,6 @@ function M.get()
     MiniIconsRed = { fg = C.red },
     MiniIconsYellow = { fg = C.yellow },
 
-    -- Mini Statusline
-    MiniStatuslineModeNormal = { fg = C.bg, bg = C.blue },
-    MiniStatuslineModeInsert = { fg = C.bg, bg = C.green },
-    MiniStatuslineModeVisual = { fg = C.bg, bg = C.purple },
-    MiniStatuslineModeReplace = { fg = C.bg, bg = C.red },
-    MiniStatuslineModeCommand = { fg = C.bg, bg = C.yellow },
-    MiniStatuslineModeOther = { fg = C.bg, bg = C.orange },
-    MiniStatuslineDevinfo = { fg = C.fg, bg = C.selection },
-    MiniStatuslineFilename = { fg = C.white, bg = C.selection },
-    MiniStatuslineFileinfo = { fg = C.fg, bg = C.selection },
-
-    -- barbar
     BufferOffset = { bg = C.bg_dark, fg = C.fg },
     BufferCurrent = { bg = C.none, fg = C.fg },
     BufferCurrentIndex = { bg = C.none, fg = C.blue },
@@ -156,27 +133,6 @@ function M.get()
     BufferTabpages = { bg = C.bg_light, fg = C.bg },
     BufferTabpage = { bg = C.bg_light, fg = C.blue },
 
-    -- Neotree
-    NeoTreeNormal = { bg = C.bg_dark, fg = C.fg },
-    NeoTreeNormalNC = { bg = C.bg_dark, fg = C.fg },
-    NeoTreeGitModified = { fg = C.orange },
-    NeoTreeGitStaged = { fg = C.green },
-    NeoTreeGitUntracked = { fg = C.purple },
-
-    -- Render Markdown
-    RenderMarkdownBullet = { fg = C.orange },
-    RenderMarkdownCode = { bg = C.bg_dark },
-    RenderMarkdownDash = { fg = C.orange },
-    RenderMarkdownTableHead = { fg = C.white },
-    RenderMarkdownTableRow = { fg = C.white },
-    RenderMarkdownH1Bg = { bg = C.red_light },
-    RenderMarkdownH2Bg = { bg = C.orange_light },
-    RenderMarkdownH3Bg = { bg = C.yellow_light },
-    RenderMarkdownH4Bg = { bg = C.green_light },
-    RenderMarkdownH5Bg = { bg = C.blue_light },
-    RenderMarkdownH6Bg = { bg = C.purple_light },
-
-    -- Snacks
     SnacksDashboardDesc = { fg = C.blue },
     SnacksDashboardFooter = { fg = C.green },
     SnacksDashboardHeader = { fg = C.green },

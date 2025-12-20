@@ -23,22 +23,10 @@ def hsl_to_hex(hsl_str):
 
 
 def generate_nvim(palette: dict[str, str]):
-    buf = 'local U = require("yoru.utils")\n\n'
-    buf += "local C = {\n"
-    buf += f'  none = "NONE",\n'
+    buf = "return {\n"
     for color in palette.keys():
         buf += f'  {color} = "{palette[color]}",\n'
     buf += "}\n"
-    buf += """
-C.red_light = U.mix_hex(C.bg, C.red, 0.1)
-C.orange_light = U.mix_hex(C.bg, C.orange, 0.1)
-C.yellow_light = U.mix_hex(C.bg, C.yellow, 0.1)
-C.green_light = U.mix_hex(C.bg, C.green, 0.1)
-C.blue_light = U.mix_hex(C.bg, C.blue, 0.1)
-C.purple_light = U.mix_hex(C.bg, C.purple, 0.1)
-
-return C
-"""
 
     with open("lua/yoru/palette.lua", "w", encoding="utf-8") as f:
         f.write(buf)
